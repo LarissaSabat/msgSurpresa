@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, #0F0A6B, #000);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Consolas, "Courier New", monospace;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Container central */
+#container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilo do campo de entrada e do botão */
+input[type="text"] {
+    background-color: #0f0a6b;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    padding: 10px;
+    font-size: 1.5rem;
+    outline: none;
+    font-family: Consolas, "Courier New", monospace;
+    text-align: center;
+}
+
+button {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    background-color: #0f0a6b;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    cursor: pointer;
+    font-family: Consolas, "Courier New", monospace;
+    outline: none;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #00ff00;
+    color: #000;
+}
+
+/* Estrelas piscando */
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    opacity: 0;
+    border-radius: 50%;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.star:nth-child(2n) {
+    animation-delay: 0.5s;
+}
+
+.star:nth-child(3n) {
+    animation-delay: 1s;
+}
+
+.star:nth-child(5n) {
+    animation-delay: 1.5s;
+}
+
+.star:nth-child(7n) {
+    animation-delay: 2s;
+}
